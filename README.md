@@ -11,3 +11,7 @@ cp config.defaults.sh config.sh
 vim config.sh
 ./start.sh
 ```
+
+
+## App compatibility
+This migration tool depends on your app setting a namespace configurable `modifiedBy` property on every save. If your app does not do this, changes will not replicate. This is necessary because this app will mark your `modifiedBy` property on docs with `"conflict-free-sync"`, which then is how the app knows not to then replicate that change back which would have created an infinite loop.
