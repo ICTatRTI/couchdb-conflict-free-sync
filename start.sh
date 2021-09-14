@@ -24,6 +24,7 @@ docker run -d \
    -e A_DB_STARTING_SEQUENCE="$A_DB_STARTING_SEQUENCE" \
    -e B_DB_URL="$B_DB_URL" \
    -e B_DB_STARTING_SEQUENCE="$B_DB_STARTING_SEQUENCE" \
+   -e MODIFIED_BY_PROPERTY_NAME="$MODIFIED_BY_PROPERTY_NAME" \
    --link couchdb:couchdb \
    -v $(pwd)/a.state.json:/a.state.json \
    -v $(pwd)/b.state.json:/b.state.json \
